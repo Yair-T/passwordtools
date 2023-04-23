@@ -3,6 +3,7 @@ from setuptools import setup
 setup(
     name="passwordtools-yt",
     version="0.1",
+    readme="README.md",
     description="A package for creating passwords and testing password strength",
     author="Yair-T",
     url="https://github.com/Yair-T",
