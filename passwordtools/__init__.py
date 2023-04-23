@@ -1,4 +1,4 @@
-from main import PasswordTool
+from passwordtools.main import PasswordTool
 
 if __name__ == "__main__":
     password = PasswordTool.generate()
