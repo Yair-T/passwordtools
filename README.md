@@ -17,7 +17,7 @@ For more info, go to documentation.
 
 For more information on how to use PasswordGenerator, please refer to the documentation website:
 
-https://passwordgenerator.readthedocs.io/en/latest/
+https://yair-t.github.io/passwordtools-docs/
 
 
 ### License
