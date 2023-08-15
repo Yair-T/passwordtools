@@ -26,4 +26,4 @@ passwordtools is licensed under the MIT License.
 
 
 ------------
-Legal clarification: The service is provided "as is". The tool does not prevent account hacking, the use is the sole responsibility of the user. No warranty of any kind is given.
+clarification: The service is provided "as is". The tool does not prevent account hacking, the use is the sole responsibility of the user. No warranty of any kind is given.
