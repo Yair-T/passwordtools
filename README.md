@@ -4,26 +4,42 @@ This Python package provides functions for generating and testing passwords. The
 ### Features.
 - Generates random passwords of a specified length.
 - Includes letters (both uppercase and lowercase), digits, and punctuation.
-- Can be used to generate strong passwords that are difficult to crack.
+- used to generate strong passwords.
 - Checking the strength of passwords.
 ## Installation.
 To install passwordtools, use the following command:
 
     pip install passwordtool-yt
 
+To build from source follow these steps:
+execute the command, `git clone https://github.com/Yair-T/passwordtools.git`.
 
-For more info, go to documentation.
+Go to the project and execute the command `py -m build`.
+
 ## Documentation.
+To use a package, first import it:
+```python
+from passwordtools import PasswordTool
+```
 
-For more information on how to use PasswordGenerator, please refer to the documentation website:
+After that, to generate the password we will execute the `generate()` command: 
+```python
+password: str = PasswordTool.generate()
+print(password)
+```
 
-https://yair-t.github.io/passwordtools-docs/
+To check the strength of the password, execute the command below:
+```python
+print(PasswordTool.is_strong(password))
+```
 
-
+The full code:
+```python
+from passwordtools import PasswordTool
+password: str = PasswordTool.generate()
+print(password)
+print(PasswordTool.is_strong(password))
+```
 ### License
 passwordtools is licensed under the MIT License.
-
-
-
-------------
-clarification: The service is provided "as is". The tool does not prevent account hacking, the use is the sole responsibility of the user. No warranty of any kind is given.
+This project is licensed under the MIT License. - see the [LICENSE](https://github.com/Yair-T/passwordtools/blob/main/LICENCE) file for details.

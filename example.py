@@ -8,7 +8,7 @@ from passwordtools import PasswordTool # To install: `pip install passwordtools-
 import pyperclip # To install: `pip install pyperclip`
 
 password: str = PasswordTool.generate(length=12)
-strength: bool = PasswordTool.test_strong(password)
+strength: bool = PasswordTool.is_strong(password)
 
 if __name__ == '__main__':
     print(f'Your password is: {password}')

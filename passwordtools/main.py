@@ -1,43 +1,38 @@
+#
+# ======================= © All rights reserved ==========================
+#                  Programmed by www.youtube.com/@Yair-T
+# =========================== In MIT License =============================
+#
 import re
 import secrets
 import string
 
-
-class PasswordTool:
-    def is_strong(password):
+class PasswordTool():
+    @staticmethod
+    def is_strong(password) -> bool:
         """
-        The function checks if a given password is strong by ensuring it has at least 8 characters and
-        contains a combination of letters, numbers, and special characters.
-
-        :param password: The password parameter is a string that represents the password that needs to be
-        tested for strength
-        :return: a boolean value. It returns True if the password is strong (i.e. it has at least 8
-        characters and contains at least one uppercase letter, one lowercase letter, one digit, and one
-        special character), and False otherwise.
+        Returns T if password is str of 12+ chars with 1+ of each: lower, upper, digit, special. F otherwise.
+        :param password: Password to check
+        :return: bool for password strength
         """
         if len(password) < 12:
             return False
-
         return bool(re.match(r"(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*)(}{][><?.|\",:']).+", password))
 
-    def generate(length=12):
+    @staticmethod
+    def generate(length: int = 12) -> str:
         """
-        This is a Python function that generates a random password of a specified length using a combination
-        of letters, digits, and punctuation.
-
-        :param length: The length parameter is an optional argument that specifies the length of the
-        password to be generated. If no value is provided for length, the default value of 12 will be used,
-        defaults to 12 (optional)
-        :return: a randomly generated password of the specified length (default length is 12) that includes
-        letters (both uppercase and lowercase), digits, and punctuation. However, the while loop condition
-        suggests that there is a missing function `test_password_strong` that is not defined in the code
-        snippet.
+        Returns a random strong password of length, which is 12+ chars with letters, digits, punctuation. 
+        Returns ValueError if length < 12. Sets length to 12 if None.
+        :param length: Desired password length
+        :return: A strong password
         """
         if length < 12:
-            return None
-        alphabet = string.ascii_letters + string.digits + string.punctuation
-        password = ''.join(secrets.choice(alphabet) for i in range(length))
-        while PasswordTool.is_strong(password) == False:
+            raise Exception("The length of the password must be 12 or more!")
+        else:
             alphabet = string.ascii_letters + string.digits + string.punctuation
-            password = ''.join(secrets.choice(alphabet) for i in range(length))
-        return password
+            password: str = ''.join(secrets.choice(alphabet) for i in range(length))
+            while not PasswordTool.is_strong(password):
+                alphabet = string.ascii_letters + string.digits + string.punctuation
+                password: str = ''.join(secrets.choice(alphabet) for i in range(length))
+            return password
