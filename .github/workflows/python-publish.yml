@@ -21,6 +21,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: pypi-publish
+      uses: pypa/gh-action-pypi-publish@v1.8.10      
     - uses: actions/checkout@v3
     - name: Set up Python
       uses: actions/setup-python@v3
