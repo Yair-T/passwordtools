@@ -4,7 +4,7 @@ import string
 
 
 class PasswordTool:
-    def test_strong(password):
+    def is_strong(password):
         """
         The function checks if a given password is strong by ensuring it has at least 8 characters and
         contains a combination of letters, numbers, and special characters.
@@ -37,7 +37,7 @@ class PasswordTool:
             return None
         alphabet = string.ascii_letters + string.digits + string.punctuation
         password = ''.join(secrets.choice(alphabet) for i in range(length))
-        while PasswordTool.test_strong(password) == False:
+        while PasswordTool.is_strong(password) == False:
             alphabet = string.ascii_letters + string.digits + string.punctuation
             password = ''.join(secrets.choice(alphabet) for i in range(length))
         return password
