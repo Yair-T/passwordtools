@@ -1,5 +1,5 @@
 # passwordtools.
-This Python package provides functions for generating and testing passwords. The password generator can create passwords of different lengths and complexity, and the password strength tester can assess the security of a password. The password generator uses a random number generator to generate random passwords. The Password Strength Checker uses a variety of factors to assess password security, including password length, and password complexity. This package is an invaluable tool for anyone who needs to create or test passwords.
+This Python package provides functions for generating and testing passwords. The password generator can create passwords of different lengths, and the password strength tester can assess the security of a password. The password generator uses a random number generator to generate random passwords. The Password Strength Checker uses a variety of factors to assess password security, including password length, and password complexity. This package is an invaluable tool for anyone who needs to create or test passwords.
     
 ### Features.
 - Generates random passwords of a specified length.
